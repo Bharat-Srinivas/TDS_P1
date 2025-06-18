@@ -774,5 +774,8 @@ async def root_post():
         ]
     }
 
+@app.post("/api/")
+async def api_alias(request: QueryRequest):
+    return await query_knowledge_base(request)
 
 
